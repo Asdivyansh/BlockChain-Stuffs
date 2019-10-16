@@ -12,7 +12,7 @@ class Block{
 
     }
 
-     calculateHash(){
+     calculateHash() //creating function{
          return  SHA256(this.index + this.previousHash + this.timestamp + JSON.stringify(this.data)+this.nonce).toString();
 
      }
@@ -47,6 +47,5 @@ class BlockChain{
 let dc = new BlockChain();
 console.log('Mining Block 1....')
 dc.addBlock(new Block(1,"07/06/2019",{amount: 4}));
-console.log('Mining Block 2....')
 dc.addBlock(new Block(2,"12/06/2018",{amount: 10}));
 
